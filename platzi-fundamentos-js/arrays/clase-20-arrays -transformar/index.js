@@ -57,15 +57,13 @@ var personas = [ daniel, amanda, jonathan, betsabet ]
 /*Declaración de funciones
 =========================================*/
 
-const pasarEstaturaCms =  persona => {
-
-	return {
+const pasarEstaturaCms =  persona => ({
 		...persona,
 		estatura: persona.estatura * 100
 		//persona.estatura = persona.estatura * 100
 	}
 	//estamos creando un nuevo objeto modificando un atributo del anterior
-}
+)
 
 var personasCms = personas.map(pasarEstaturaCms)
 //map modifica todos los elementos en un array, devuelve un nuevo array

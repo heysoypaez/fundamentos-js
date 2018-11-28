@@ -51,8 +51,8 @@ Persona.prototype.saludar = function () {
 }
 
 //Para llamar a la funcion se usa Persona.soyAlto()
-Persona.prototype.soyAlto = function () 
-
+Persona.prototype.soyAlto = function (this.altura) { return altura > 1.7}
+//retornar la condicion de si es alta
 
 
 //Un nuevo prototipo de Persona se creo en sacha

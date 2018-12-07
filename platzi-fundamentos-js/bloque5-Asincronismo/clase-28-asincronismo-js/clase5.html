@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Clase 6 Js - Daniel</title>
+	</head>
+
+
+
+	<body>
+		<h1>Clase de Platzi</h1>
+		<h2>Fundamentos de Javascript</h2>
+		<p id="output"></p>
+		<div> 
+				
+<h2>IDEAS CLAVES</h2>
+-------------
+
+<h3>*Javascript solo puede hacer una cosa a la vez independiente de la potencia de tu computador.*</h3>
+
+¿Cómo funciona la máquina del asincronismo en javascript?
+
+<ol>
+
+<li>javascript Puede delegar la ejecucion de ciertas funciones a otros procesos</li>
+	1.1 Este es el modelo de concurrencia event loop
+
+<li>Javascript tiene una pila de ejecucion (como si fuera un estante con notas de pedidos, se acumula).</li>
+	2.1 Cuando termina una función en la pila de ejecución (cuando se despacha del pedido) la saca de la pila (el estante) y la bota.
+
+<li>calllback es una funcion que se ejecutará cuando regrese la respuesta del servidor u otra función.</li>
+	3.1 Mientras existe un callback javascript sigue despachando otros pedidos (ejecutando el codigo principal).
+	3.2 Cuando llega la respuesta (lo que se necesitaba para el  pedido) js lo mete en **la cola de tareas** (area de despacho) (peticiones a servidor, interacccion visual, eventos programados)
+
+<li>En l cola de tareas javascripta encola funciones (pedidos) según van llegando</li>
+	4.1 **Solo cuando** se quede sin programas en la pila de ejecución (estante con notas de pedidos) **es que va** a la cola de tareas (zona de despacho)
+
+</ol>
+
+<h3>Por lo tanto</h3>
+
+=> EVITA CUELLOS DE BOTELLA EN LA PILA DE EJECUCIÒN
+=> No voy a bloquear el event loop
+
+
+
+		</div>
+		<script src="index.js">  </script>
+
+	</body>
+</html>

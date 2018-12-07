@@ -125,8 +125,42 @@ obtenerPersonaje(1)
 	.then( (personaje) => {
 
 		imprimirInfoPersonajes(personaje)
-		//Y aqui dejamos de pedir, retornar más personajes
+		return obtenerPersonaje(6)
+		
 	})
+
+	
+	.then( (personaje) => {
+
+		imprimirInfoPersonajes(personaje)
+		return obtenerPersonaje(7)
+		
+	})
+	
+	
+	.then( (personaje) => {
+
+		imprimirInfoPersonajes(personaje)
+		return obtenerPersonaje(8)
+		
+	})
+	
+	
+	.then( (personaje) => {
+
+		imprimirInfoPersonajes(personaje)
+		return obtenerPersonaje(9)
+		
+	})
+		
+	
+	.then( (personaje) => {
+
+		imprimirInfoPersonajes(personaje)
+		
+	})
+
+	//Y aqui dejamos de pedir, retornar más personajes
 
 	.catch(alertarError)
 	//El mismo catch funciona para todos

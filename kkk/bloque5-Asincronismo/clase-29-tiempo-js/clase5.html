@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Clase 6 Js - Daniel</title>
+	</head>
+
+
+
+	<body>
+		<h1>Clase de Platzi</h1>
+		<h2>Fundamentos de Javascript</h2>
+		<p id="output"></p>
+
+		<script> 
+
+
+function tiempoSincrono () {
+
+	console.log("tiempo Sincrono");
+
+
+			//VARIABLES
+			const segundos = 1000 //1000ms = 1 segundo
+
+			console.log("Pedido A");
+
+			const fnConsola = () => console.log("Pedido B");
+
+
+			let tiempoPedidoA = 1*segundos
+			let tiempoPedidoB = 1*segundos
+			let tiempoPedidoC = 1*segundos
+
+			 tiempoPedidoB += tiempoPedidoA
+			 tiempoPedidoC += tiempoPedidoB
+
+			setTimeout(fnConsola,tiempoPedidoA)
+			//recibe dos parametros uan funcion y un delay en tiempo, el delay se expresa en milisegundis
+
+			
+			//le pasamos una referencia , es decir el nombre de la funcion
+			//no la funcion ejecutada es decir myFunction()
+
+			setTimeout( () => console.log("Pedido C") , tiempoPedidoB)
+
+			setTimeout( () => console.log("Pedido D"), tiempoPedidoC)
+
+
+
+}
+
+function tiempoAsincrono(callback) {
+
+	console.log("tiempo Asincrono");
+
+		
+			//VARIABLES
+			const segundos = 1000 //1000ms = 1 segundo
+
+			console.log("Pedido A async");
+
+			const ConsolaB = () => console.log("Pedido B async");
+
+
+			setTimeout(ConsolaB,0)
+			//recibe dos parametros uan funcion y un delay en tiempo, el delay se expresa en milisegundis
+
+			
+			//le pasamos una referencia , es decir el nombre de la funcion
+			//no la funcion ejecutada es decir myFunction()
+
+			console.log("Pedido C async") 
+
+			setTimeout( () => console.log("Pedido D async"), 0)
+
+
+			if(callback) {
+
+				return function x() { return tiempoSincrono()} 
+				
+					
+			}
+
+}
+
+tiempoAsincrono(tiempoSincrono() )
+ 
+
+
+
+
+
+function tiempo() {
+	
+	let tinicial = Date.now();
+				//¿Y que pasa si ejecutamos y despues tenemos un codigo larguisimo?
+				for (let i = 0; i < 1000000000; i++) {
+					 
+				}
+
+	let tfinal = Date.now()
+	let intervalo = tfinal - tinicial;
+	let intervaloEnSegundos = intervalo / 1000;
+	let intervaloEnMinutos = intervaloEnSegundos / 60;
+	console.log(`Tomó ${intervaloEnSegundos} segundos.es decir ${intervaloEnMinutos}`)
+
+}
+
+
+//papa, tomate, lechuga, zapallo italiano, hongo
+
+			/*
+			tareas sincrona
+	
+
+	¿Que se ejecuta asincrono?
+	==========================
+
+			tarea para el futuro es asincrono
+			actuar con el dom, modificar un titulo o boton sera asincrono
+			mostrar un alert asincrono
+
+			pedido de datos a api externo es asincronp
+
+			tenlo en encuenta
+
+			tener en cuenta el tiempo, que un setTimeOut de dos segundos es dos segundos minimos
+
+			hara mas facil todo
+
+			comprender la maquina del asincronismo respecto a  la
+			piila de ejecucion y la cola de tareas
+
+asincronismo es la diferencia entre un dev que esta aprendiendo todavia y un dev que comprende los principios de js
+
+			*/
+		</script>
+<!--
+		<script src="index.js">  </script>
+-->
+	</body>
+</html>

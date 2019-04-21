@@ -1,0 +1,32 @@
+body {
+	background-color: #bbbbff;
+	font-family: "Raleway", sans-serif;
+}
+
+.titulo-clave {
+	text-align: center;
+	text-decoration: underline;
+}
+
+#foto-estudiante {
+	width: 90%;
+	height: auto;
+}
+
+.header {
+	width: 35%;
+	height:  ;
+	background-color: #222;
+	color: white;
+	padding-left: 2%;
+	padding-right: 2%;
+	position: fixed;
+	float: left;
+}
+
+.content {
+
+	width: 60%;
+	float: right;
+
+}

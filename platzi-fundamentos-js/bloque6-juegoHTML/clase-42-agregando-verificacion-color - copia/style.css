@@ -1,0 +1,189 @@
+/*
+Autor: Sacha Lifszyc , Daniel Páez
+URL Autor: https://heysoypaez
+Tema de la clase: Juego html
+Descripción: juego html que recopila los fundamentos de js
+URL Autor:  heysoypaez.com
+URL código: github.com/heysoypaez
+*/
+ 
+/* Table of Contents
+
+	- Defaults
+		- Body
+		- Typographical Elements
+		- Headings
+		- Objects
+	- Structure and Layout
+		- Site Containers
+		- Title
+		- Column Widths and Positions
+		- Column Classes
+	- Common Classes
+		- Header
+		- Gameboard
+		- Footer
+	- Media Queries
+		- max-width: 1139px
+		- max-width: 1023px
+		- max-width: 767px
+
+*/
+
+
+/*
+Defaults
+---------------------------------------------------------------------------------------------------- */
+	
+	/* Body
+	------------------------------------------------------------------------------------------------ */
+
+	body {
+	        margin: 0;
+	        background: #dedede;
+	        display: flex;
+	        align-items: center;
+	        height: 100vh;
+			font-family: "Raleway", sans-serif;
+	      }
+
+      .gameboard {
+        height: 100vh;
+        width: 100vh;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+        max-height: 60vh;
+        max-width: 60vh;
+
+      }
+
+      .color {
+        width: 50%;
+        height: 50%;
+        display: inline-block;
+      }
+
+      .left {
+        float: left;
+      }
+
+      .right {
+        float: left;
+      }
+
+      .celeste {
+        background: #22a6b3;
+      }
+
+      .celeste.light {
+        background: #7ed6df;
+      }
+
+      .violeta {
+        background: #be2edd;
+      }
+
+      .violeta.light {
+        background: #e056fd;
+      }
+
+      .naranja {
+        background: #f0932b;
+      }
+
+      .naranja.light {
+        background: #ffbe76;
+      }
+
+      .verde {
+        background: #6ab04c;
+      }
+
+      .verde.light {
+        background: #badc58;
+      }
+
+      
+      .btn-start {
+      cursor: pointer;
+      width: 420px;
+      height: 100px;
+      background: #ecf0f1;
+      color: #2c3e50;
+      border: none;
+      border-bottom: 4px solid #c4c6c7;
+      border-radius: 8px;
+      font-size: 3em;
+      position: absolute;
+      top: calc(50% - 50px);
+      left: calc(50% - 210px);
+      transition: .5s;
+      outline: none;
+    }
+
+    .btn-start:hover {
+      color: #ecf0f1;
+      background: #2c3e50;
+      border-bottom: 4px solid #1f3346;
+    }
+    
+    .btn-start:active {
+      transform: scale(.95);
+    }
+
+      .hide {
+        display: none;
+      }
+
+/*==========================*/
+
+
+.titulo-clave {
+	text-align: center;
+	text-decoration: underline;
+	font-size: 5vh;
+}
+
+#foto-estudiante {
+	width: 10%;
+	height: auto;
+	border-radius: 100px;
+}
+
+.header {
+	width: 100%;
+	height:  20vh;
+	background-color: #222;
+	color: white;
+	padding-left: 2%;
+	padding-right: 2%;
+	position: absolute;
+	float: left;
+	top: 0px;
+
+}
+
+
+.col-1-header{
+	float: left;
+	width: 25%;
+}
+
+.col-2-header{
+	float: left;
+	width: 36%;
+}
+
+.col-3-header{
+	float: left;
+	width: 25%;
+}
+
+
+.content {
+
+	width: 60%;
+	float: right;
+
+}

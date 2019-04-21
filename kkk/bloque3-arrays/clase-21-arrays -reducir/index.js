@@ -85,11 +85,10 @@ for (var i = 0; i < personas.length; i++) {
  	acum +=  personas[i].cantidadDeLibros;
 
 }
+console.log(`las personas en total tienen ${acum} libros`);
+
+
 */
-
-
-/*necesito una funcion que sume la cantidad de stock de cada producto*/
-
 
 //Escribamos el mismo codigo con reduce
 
@@ -102,18 +101,18 @@ const reducer = ( acum,{ cantidadDeLibros } ) =>
 
 /*
 Para reducir ** un array se necesitan 2 cosas: Una función y el valor original / valor inicial del acumulador**.
+
 La función va pasando el valor acumulado por cada elemento del array.
 */
 
-debugger
-
 var totalDeLibros = personas.reduce(reducer, valorInicial)
+//necesitamos una funcion y un valor inicia
+
+console.log(`Che, hay ${totalDeLibros} en esta familia`)
 
 /*Consola y consultas
 =========================================*/
 console.log(personasCms)
-console.log(`Che, hay ${totalDeLibros} en esta familia`)
-
 
 /* 
 IDEAS CLAVES

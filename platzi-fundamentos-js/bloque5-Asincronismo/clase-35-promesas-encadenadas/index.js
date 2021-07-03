@@ -90,15 +90,48 @@ function alertarError(id) {
 /*EJECUCIÓN DE FUNCIONES Y PROMESAS
 ========================================0*/
 
-obtenerPersonaje(1)
-	.then( (personaje) => {
 
+/*
+Voy a crear un ciclo for para ejecutar la promesa
+agregar un condicional para que si es el ultimo numero colocar el mismo codigo sin el return
+
+*/
+
+//variable con el limite para el ciclo for
+	var limite = 10;
+	for(var i = 0;i<limite;i++) {
+		
+		if (i===1){
+		obtenerPersonaje(i) 
+		}
+		
+		
+		.then( (personaje) => {
 		// la data de personaje la recibimos en resolve(data)
 		imprimirInfoPersonajes(personaje)
-		return obtenerPersonaje(2)
+		return obtenerPersonaje(i + 1)
 		//encadenado las promesas
+		})
+		}
+			      
+		if(i===limite) {
+			.then( (personaje) => {
+			// la data de personaje la recibimos en resolve(data)
+			imprimirInfoPersonajes(personaje)
+			})
+			}	
+			
+		
+	}
+	
 
-	})
+
+
+
+
+
+
+
 	//Este va a ser personaje 2, lo llamamos 4 lineas arriba en el return
 	.then( (personaje) => {
 
